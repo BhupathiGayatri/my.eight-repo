@@ -1,0 +1,21 @@
+function analyzeResume() {
+  const resumeText = document.getElementById('resumeInput').value;
+  const resultDiv = document.getElementById('result');
+
+  if (!resumeText.trim()) {
+    resultDiv.innerHTML = "<p>Please paste your resume text.</p>";
+    return;
+  }
+
+  const wordCount = resumeText.trim().split(/\s+/).length;
+  const keywords = ["JavaScript", "HTML", "CSS", "Python", "React", "Node.js"];
+  const foundKeywords = keywords.filter(keyword =>
+    resumeText.toLowerCase().includes(keyword.toLowerCase())
+  );
+
+  let output = `<p><strong>Word Count:</strong> ${wordCount}</p>`;
+  output += `<p><strong>Matched Skills:</strong> ${foundKeywords.join(', ') || "None"}</p>`;
+
+  resultDiv.innerHTML = output;
+}
+

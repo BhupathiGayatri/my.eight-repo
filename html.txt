@@ -1,0 +1,19 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Resume Analyzer</h1>
+
+    <input type="file" id="resumeInput" accept=".txt">
+    <button onclick="analyzeResume()">Analyze</button>
+
+    <h2>Analysis Result:</h2>
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
